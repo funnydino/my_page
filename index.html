@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Aleksey Ponomarev">
+    <meta name="description" content="business card website of&nbsp;front-end developer Aleksey Ponomarev">
+    <link rel="preload" href="./fonts/montserrat-regular-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./img/my_photos/mini_me_1.jpg" as="image">
+    <link rel="preload" href="./img/my_photos/mini_me_2.jpg" as="image">
+    <link rel="preload" href="./img/my_photos/mini_me_3.jpg" as="image">
+    <link rel="preload" href="./img/my_photos/mini_me_4.jpg" as="image">
+    <link rel="preload" href="./img/my_photos/mini_me_5.jpg" as="image">
+    <link rel="preload" href="./img/svg/mail.svg" as="image">
+    <link rel="preload" href="./img/svg/mail_err.svg" as="image">
+    <link rel="icon" href="./img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="./css/vendor/normalize.css">
+    <link rel="stylesheet" href="./css/vendor/choices.min.css">
+    <link rel="stylesheet" href="./css/keyframes.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/vendor/focus-visible.min.js"></script>
+    <script defer src="./js/vendor/gsap.min.js"></script>
+    <script defer src="./js/vendor/choices.min.js"></script>
+    <script defer src="./js/locales.js" type="module"></script>
+    <script defer src="./js/main.js" type="module"></script>
+    <title>Front-end developer Aleksey Ponomarev</title>
+</head>
+
+<body class="body" id="top">
+
+    <div class="overlay"></div>
+
+    <!-- Menu -->
+
+    <div class="overlay-menu fix-block">
+        <ul class="overlay-menu__list">
+            <li class="overlay-menu__item">
+                <a class="overlay-menu__link" href="#about">
+                    <span data-translate="aboutMe">about me</span>
+                </a>
+            </li>
+            <li class="overlay-menu__item">
+                <a class="overlay-menu__link" href="#portfolio">
+                    <span data-translate="portfolio">portfolio</span>
+                </a>
+            </li>
+            <li class="overlay-menu__item">
+                <a class="overlay-menu__link" href="#contacts">
+                    <span data-translate="contacts">contacts</span>
+                </a>
+            </li>
+        </ul>
+    </div> <!-- /.menu -->
+
+    <!-- Header -->
+
+    <header class="header fix-block" id="header">
+        <div class="container header__container">
+            <button class="menu menu-btn" aria-label="menu">
+                <span class="menu__center-line"></span>
+            </button>
+            <nav class="header__nav">
+                <a class="header__nav-link nav-link nav-link--email" href="mailto:funnydino1@gmail.com">
+                    <svg class="nav-link__icon nav-link__icon_email">
+                        <use xlink:href="./img/svg/sprite.svg#email"></use>
+                    </svg>
+                    funnydino1@gmail.com
+                </a>
+                <a class="header__nav-link nav-link nav-link--phone" href="tel:+79114720435">
+                    <svg class="nav-link__icon nav-link__icon_phone">
+                        <use xlink:href="./img/svg/sprite.svg#phone"></use>
+                    </svg>
+                    +7 911 472 04 35
+                </a>
+                <select class="header__nav-select nav-select" name="select-language" id="select-language" aria-label="language selection">
+                    <option value="en" selected>en</option>
+                    <option value="ru">ru</option>
+                </select>
+            </nav>
+        </div>
+    </header> <!-- /.header -->
+
+    <div class="page">
+
+        <main class="main">
+
+            <!-- Hero Section -->
+
+            <section class="hero">
+                <div class="container hero__container">
+                    <div class="hero__content">
+                        <h1 class="visually-hidden" data-translate="siteDescr">
+                            business card website of&nbsp;front-end developer Aleksey Ponomarev
+                        </h1>
+                        <h2 class="hero__title" data-translate="name">
+                            Aleksey
+                        </h2>
+                        <h3 class="hero__subtitle" data-translate="profession">
+                            front-end developer
+                        </h3>
+                    </div>
+                </div>
+            </section> <!-- /.hero -->
+
+            <!-- About Section -->
+
+            <section class="about" id="about">
+                <div class="container about__container">
+                    <h2 class="about__title section-title" data-translate="getToKnow">
+                        let&rsquo;s get to&nbsp;know each other
+                    </h2>
+                    <div class="about__content">
+                        <div class="about__photo">
+                            <div class="about__photo-bg"></div>
+                        </div>
+                        <h3 class="about__subtitle section-subtitle" data-translate="fewWords">
+                            a&nbsp;few words about myself
+                        </h3>
+                        <p class="about__text" data-translate="greetings">
+                            hi!
+                        </p>
+                        <p class="about__text">
+                            <span data-translate="myNameIs">My&nbsp;name is&nbsp;Aleksey Ponomarev, I&nbsp;am</span> <span class="about__text--my-age"></span>&nbsp;<span data-translate="myHometown">years old and I&rsquo;m from the Kaliningrad city</span>. <span data-translate="currentJobPartOne">Currently I&nbsp;am working for a&nbsp;company</span> <a href="https://sys4tec.com/" class="about__link"><span data-translate="companyName">System Technologies</span></a> <span data-translate="currentJobPartTwo">on&nbsp;a&nbsp;software engineer position</span>.
+                        </p>
+                        <p class="about__text" data-translate="aboutResponsibilities">
+                            my&nbsp;responsibilities include developing extensions for a&nbsp;mobile application on&nbsp;WebView and components for a&nbsp;Web application &lpar;using Vue.js, TypeScript and Angular&rpar;, writing queries to&nbsp;getting data &lpar;working with SQLite and API&rpar;, designing logic for Frontend and Backend interaction.
+                        </p>
+                        <div class="skills">
+                            <div class="skills__descr">
+                                <h3 class="skills__subtitle section-subtitle" data-translate="mySkills">
+                                    my skills:
+                                </h3>
+                                <ul class="skills__list">
+                                    <li class="skills__item" data-descr="HTML" tabindex="0">
+                                        <svg class="skills__icon">
+                                            <use xlink:href="./img/svg/sprite.svg#html"></use>
+                                        </svg>
+                                    </li>
+                                    <li class="skills__item" data-descr="CSS" tabindex="0">
+                                        <svg class="skills__icon">
+                                            <use xlink:href="./img/svg/sprite.svg#css"></use>
+                                        </svg>
+                                    </li>
+                                    <li class="skills__item" data-descr="JavaScript" tabindex="0">
+                                        <svg class="skills__icon">
+                                            <use xlink:href="./img/svg/sprite.svg#js"></use>
+                                        </svg>
+                                    </li>
+                                    <li class="skills__item" data-descr="Vue.js" tabindex="0">
+                                        <svg class="skills__icon">
+                                            <use xlink:href="./img/svg/sprite.svg#vue"></use>
+                                        </svg>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a class="skills__btn resume btn" href="./resume/resume.pdf" data-translate="viewResume" download>
+                                view resume
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section> <!-- /.about -->
+
+            <!-- Portfolio Section -->
+
+            <section class="portfolio" id="portfolio">
+                <div class="container portfolio__container">
+                    <h2 class="portfolio__title section-title" data-translate="myWorks">
+                        my works
+                    </h2>
+                    <ul class="portfolio__list">
+                        <li class="portfolio__item">
+                            <a href="https://vashivorota39.ru/" class="portfolio__link" rel="noopener" target="_blank">
+                                <img class="portfolio__icon" src="./img/portfolio/gates.png"
+                                    alt="logo for the website of a company servicing automation for gates and barriers" data-translate="automaticEquipmentAttr"
+                                >
+                                <h3 class="portfolio__subtitle section-subtitle" data-translate="automaticEquipment">
+                                    automation for gates and barriers
+                                </h3>
+                            </a>
+                        </li>
+                        <li class="portfolio__item">
+                            <a href="https://funnydino.github.io/blanchard/" class="portfolio__link" rel="noopener"
+                                target="_blank"
+                            >
+                                <svg class="portfolio__icon">
+                                    <use xlink:href="./img/svg/sprite.svg#blanchard-logo"></use>
+                                </svg>
+                                <h3 class="portfolio__subtitle section-subtitle" data-translate="artGallery">
+                                    art gallery
+                                </h3>
+                            </a>
+                        </li>
+                        <li class="portfolio__item">
+                            <a href="https://funnydino.github.io/oxford_house/" class="portfolio__link" rel="noopener" target="_blank">
+                                <img class="portfolio__icon" src="./img/portfolio/oxford-house.png"
+                                    alt="Oxford House English School logo" data-translate="englishSchoolAttr"
+                                >
+                                <h3 class="portfolio__subtitle section-subtitle" data-translate="englishSchool">
+                                    english language school
+                                </h3>
+                            </a>
+                        </li>
+                        <li class="portfolio__item">
+                            <a href="https://funnydino.github.io/pairs-the_game/" class="portfolio__link" rel="noopener" target="_blank">
+                                <img class="portfolio__icon" src="./img/portfolio/one-pair.png" alt="pairs game logo" data-translate="browserGameAttr">
+                                <h3 class="portfolio__subtitle section-subtitle" data-translate="browserGame">
+                                    browser game &apos;Find a&nbsp;Pair&apos;
+                                </h3>
+                            </a>
+                        </li>
+                        <li class="portfolio__item">
+                            <a href="https://github.com/funnydino" class="portfolio__link" rel="noopener" target="_blank">
+                                <img class="portfolio__icon" src="./img/portfolio/octocat.png" alt="GitHub logo" data-translate="otherWorksAttr">
+                                <h3 class="portfolio__subtitle section-subtitle" data-translate="otherWorks">
+                                    ...&nbsp;and other works
+                                </h3>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section> <!-- /.portfolio -->
+
+        </main>
+
+        <!-- Footer -->
+
+        <footer class="footer" id="contacts">
+            <div class="container footer__container">
+                <div class="footer__inner">
+                    <div class="form footer__form">
+                        <form class="feedback form__feedback" id="feedback" action="#" aria-label="feedback form">
+                            <h2 class="form__title section-subtitle" data-translate="writeMessage">
+                                write a message
+                            </h2>
+                            <label for="name" class="visually-hidden" data-translate="enterNameToField">
+                                enter your name in the field
+                            </label>
+                            <input id="name" class="feedback__input required feedback__input--name" type="text"
+                                name="name" placeholder="Your name*" data-translate="enterNamePlaceholder"
+                            >
+                            <label for="email" class="visually-hidden" data-translate="enterEmailToField">
+                                enter your email address in the field
+                            </label>
+                            <input id="email" class="feedback__input required feedback__input--email" type="email" name="email" placeholder="E-mail*">
+                            <label for="message" class="visually-hidden" data-translate="enterMessageToField">
+                                enter your message
+                            </label>
+                            <textarea id="message" class="feedback__message required" name="message" form="feedback"
+                                placeholder="Message*" data-translate="enterMessagePlaceholder"
+                            ></textarea>
+                            <div class="feedback__consent">
+                                <input id="consent" class="feedback__consent-checkbox required" type="checkbox" name="agreement" checked>
+                                <label for="consent" class="feedback__consent-label" data-translate="processingDataConsent">
+                                    Agree to data processing
+                                </label>
+                            </div>
+                            <button class="feedback__btn btn" type="submit" data-translate="submitBtn">send</button>
+                        </form>
+                    </div>
+                    <div class="contacts footer__contacts">
+                        <ul class="contacts__social contacts__list">
+                            <li class="contacts__item">
+                                <a href="https://t.me/alexey_ap" class="contacts__link contacts__link_telegram"
+                                    rel="noopener" target="_blank" aria-label="Telegram"
+                                ></a>
+                            </li>
+                            <li class="contacts__item">
+                                <a href="https://wa.me/79114720435" class="contacts__link contacts__link_whatsapp"
+                                    rel="noopener" target="_blank" aria-label="WhatsApp"
+                                ></a>
+                            </li>
+                            <li class="contacts__item">
+                                <a href="https://vk.com/a.ponomarev" class="contacts__link contacts__link_vk"
+                                    rel="noopener" target="_blank" aria-label="VKontakte"
+                                ></a>
+                            </li>
+                            <!-- <li class="contacts__item">
+                                <a href="https://www.instagram.com/aleksey.ap" class="contacts__link contacts__link_instagram"
+                                    rel="noopener" target="_blank" aria-label="Instagram"
+                                ></a>
+                            </li> -->
+                            <li class="contacts__item">
+                                <a href="https://github.com/funnydino" class="contacts__link contacts__link_github"
+                                    rel="noopener" target="_blank" aria-label="Github"
+                                ></a>
+                            </li>
+                            <li class="contacts__item">
+                                <a href="https://www.linkedin.com/in/aleksey-ponomarev/"
+                                    class="contacts__link contacts__link_linkedin" rel="noopener" target="_blank"
+                                    aria-label="LinkedIn"
+                                ></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer> <!-- /.footer -->
+
+        <!-- Copyright -->
+
+        <div class="copyright">
+            <div class="container">
+                <div class="copyright__text">
+                    © <span class="copyright__text-year"></span>. <a class="copyright__mail"
+                        href="mailto:funnydino1@gmail.com"
+                    >funnydino1@gmail.com</a>
+                </div>
+            </div>
+        </div> <!-- /.copyright -->
+
+        <!-- Popups -->
+
+        <div class="popups">
+            <div class="popups__overlay fix-block">
+                <div class="popup popup-email">
+                    <button class="popup__close"></button>
+                    <img class="popup-email__img" src="#" alt="mail envelope icon" data-translate="mailEnvelopeAttr">
+                    <p class="popup-email__message"></p>
+                </div>
+            </div>
+        </div> <!-- /.popups -->
+
+    </div>
+</body>
+
+</html>

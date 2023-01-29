@@ -1,0 +1,55 @@
+/* Keyframes */
+
+@keyframes bg-scale {
+    0% {
+        transform: scale(0.8);
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes my-photos {
+    0% {
+        background-image: url('../img/my_photos/mini_me_1.jpg');
+    }
+
+    20% {
+        background-image: url('../img/my_photos/mini_me_2.jpg');
+    }
+
+    40% {
+        background-image: url('../img/my_photos/mini_me_3.jpg');
+    }
+
+    60% {
+        background-image: url('../img/my_photos/mini_me_4.jpg');
+    }
+
+    80% {
+        background-image: url('../img/my_photos/mini_me_5.jpg');
+    }
+
+    100% {
+        background-image: url('../img/my_photos/mini_me_5.jpg');
+    }
+}
+
+@keyframes my-photos-scale {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}

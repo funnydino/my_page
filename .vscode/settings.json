@@ -1,0 +1,10 @@
+{
+    "eslint.validate": [
+        "html",
+        "javascript"
+    ],
+    "stylelint.validate": [
+        "html",
+        "css"
+    ]
+}

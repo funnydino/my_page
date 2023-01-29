@@ -1,0 +1,176 @@
+{
+    "extends": ["airbnb-base", "plugin:vue/recommended"],
+    "globals": {
+        "qsTr": "readonly",
+        "gsap": "readonly",
+        "Power4": "readonly"
+    },
+    "overrides": [{
+            "files": ["*.html"],
+            "rules": {
+                "max-len": "off",
+                "max-lines": "off",
+                "vue/comment-directive": "off"
+            }
+        },
+        {
+            "files": ["*.vue"],
+            "rules": {
+                "max-lines": "off",
+                "vue/multi-word-component-names": "off"
+            }
+        },
+        {
+            "files": ["*.d.ts"],
+            "rules": {
+                "max-classes-per-file": "off",
+                "max-lines": "off",
+                "no-unused-vars": "off",
+                "no-undef": "off",
+                "no-use-before-define": "off"
+            }
+        }
+    ],
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "moduleDirectory": ["node_modules"]
+            }
+        }
+    },
+    "env": {
+        "node": true,
+        "es6": true,
+        "browser": true
+    },
+    "rules": {
+        "indent": ["error", 4, {
+            "SwitchCase": 1
+        }],
+        "func-names": ["error", "as-needed"],
+        "vars-on-top": "off",
+        "no-inner-declarations": "error",
+        "eqeqeq": ["warn", "always", {
+            "null": "ignore"
+        }],
+        "no-restricted-properties": ["error", {
+            "object": "arguments",
+            "property": "callee",
+            "message": "arguments.callee is deprecated"
+        }, {
+            "object": "global",
+            "property": "isFinite",
+            "message": "Please use Number.isFinite instead"
+        }, {
+            "object": "self",
+            "property": "isFinite",
+            "message": "Please use Number.isFinite instead"
+        }, {
+            "object": "window",
+            "property": "isFinite",
+            "message": "Please use Number.isFinite instead"
+        }, {
+            "object": "global",
+            "property": "isNaN",
+            "message": "Please use Number.isNaN instead"
+        }, {
+            "object": "self",
+            "property": "isNaN",
+            "message": "Please use Number.isNaN instead"
+        }, {
+            "object": "window",
+            "property": "isNaN",
+            "message": "Please use Number.isNaN instead"
+        }, {
+            "property": "__defineGetter__",
+            "message": "Please use Object.defineProperty instead."
+        }, {
+            "property": "__defineSetter__",
+            "message": "Please use Object.defineProperty instead."
+        }],
+        "padding-line-between-statements": [
+            "error",
+            {
+                "blankLine": "always",
+                "prev": "*",
+                "next": "do"
+            },
+            {
+                "blankLine": "always",
+                "prev": "*",
+                "next": "if"
+            },
+            {
+                "blankLine": "always",
+                "prev": "*",
+                "next": "for"
+            },
+            {
+                "blankLine": "always",
+                "prev": "*",
+                "next": "while"
+            },
+            {
+                "blankLine": "always",
+                "prev": "*",
+                "next": "try"
+            },
+            {
+                "blankLine": "always",
+                "prev": "*",
+                "next": "return"
+            },
+            {
+                "blankLine": "always",
+                "prev": "function",
+                "next": "*"
+            },
+            {
+                "blankLine": "always",
+                "prev": ["const", "let", "var", "do", "if", "for", "while", "try"],
+                "next": "*"
+            },
+            {
+                "blankLine": "any",
+                "prev": ["const", "let", "var"],
+                "next": ["const", "let", "var"]
+            }
+        ],
+        "no-useless-escape": "warn",
+        "no-param-reassign": ["error", {
+            "props": true,
+            "ignorePropertyModificationsFor": ["el", "popup"]
+        }],
+        "arrow-spacing": "warn",
+        "prefer-arrow-callback": "warn",
+        "prefer-rest-params": "off",
+        "func-style": ["off", "expression"],
+        "id-length": "warn",
+        "max-len": ["error", 120, 2, {
+            "ignoreUrls": true,
+            "ignoreComments": false,
+            "ignoreRegExpLiterals": true,
+            "ignoreStrings": false,
+            "ignoreTemplateLiterals": true
+        }],
+        "no-plusplus": ["error", {
+            "allowForLoopAfterthoughts": true
+        }],
+        "quotes": ["error", "single", {
+            "avoidEscape": true
+        }],
+        "space-before-blocks": ["error", "always"],
+        "linebreak-style": "off",
+        "no-multi-spaces": "error",
+        "import/prefer-default-export": "off",
+        "no-underscore-dangle": "off",
+        "strict": "warn",
+        "camelcase": ["error", {
+            "properties": "always",
+            "ignoreDestructuring": true
+        }],
+        "max-lines": ["error", 200],
+        "max-lines-per-function": ["error", 50],
+        "import/extensions": "off"
+    }
+}
