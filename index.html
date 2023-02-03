@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Aleksey Ponomarev">
-    <meta name="description" content="business card website of&nbsp;front-end developer Aleksey Ponomarev">
+    <meta name="description" content="Business card website of&nbsp;front-end developer Aleksey Ponomarev">
     <link rel="preload" href="./fonts/montserrat-regular-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="./img/my_photos/mini_me_1.jpg" as="image">
     <link rel="preload" href="./img/my_photos/mini_me_2.jpg" as="image">
@@ -35,7 +35,7 @@
 
     <!-- Menu -->
 
-    <div class="overlay-menu fix-block">
+    <div class="overlay-menu fix-block adaptive-height">
         <ul class="overlay-menu__list">
             <li class="overlay-menu__item">
                 <a class="overlay-menu__link" href="#about">
@@ -93,7 +93,7 @@
                 <div class="container hero__container">
                     <div class="hero__content">
                         <h1 class="visually-hidden" data-translate="siteDescr">
-                            business card website of&nbsp;front-end developer Aleksey Ponomarev
+                            Business card website of&nbsp;front-end developer Aleksey Ponomarev
                         </h1>
                         <h2 class="hero__title" data-translate="name">
                             Aleksey
@@ -325,6 +325,25 @@
         </div> <!-- /.popups -->
 
     </div>
+    <script>
+        const updateAdaptiveHeight = () => {
+            document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`);
+        };
+
+        (() => {
+            window.addEventListener('resize', () => {
+                updateAdaptiveHeight();
+            });
+            window.addEventListener('orientationchange', () => {
+                updateAdaptiveHeight();
+            });
+
+            setTimeout(
+                updateAdaptiveHeight,
+                50
+            );
+        })();
+    </script>
 </body>
 
 </html>

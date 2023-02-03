@@ -159,8 +159,8 @@ const localesData = {
         ru: 'отправить',
     },
     siteDescr: {
-        en: 'business card website of&nbsp;front-end developer Aleksey Ponomarev',
-        ru: 'сайт-визитка frontend-разработчика Пономарёва Алексея',
+        en: 'Business card website of&nbsp;front-end developer Aleksey Ponomarev',
+        ru: 'Сайт-визитка frontend-разработчика Пономарёва Алексея',
     },
     siteTitle: {
         en: 'Front-end developer Aleksey Ponomarev',
