@@ -436,6 +436,7 @@ section {
 /* Custom Select */
 
 .choices {
+    position: relative;
     text-transform: uppercase;
     transition: color 0.2s ease;
 }
@@ -458,21 +459,23 @@ section {
 
 .choices[data-type*='select-one']::after {
     right: 5px;
+    top: calc(50% - 8px / 2);
     margin-top: 0;
     border: none;
     border-top: 2px solid var(--font-color);
     border-right: 2px solid var(--font-color);
     width: 7px;
     height: 7px;
-    transform: rotate(-45deg) translateY(-50%);
+    transform: scaleY(-1) rotate(-45deg) translateX(-50%);
     transition: all 0.2s ease;
 }
 
 .choices[data-type*='select-one'].is-open::after {
+    top: calc(50% + 4px / 2);
     border: none;
     border-top: 2px solid var(--active-color);
     border-right: 2px solid var(--active-color);
-    transform: scaleY(-1) rotate(-45deg) translateY(-50%);
+    transform: rotate(-45deg) translateX(-50%);
 }
 
 .choices__inner {

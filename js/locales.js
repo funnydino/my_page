@@ -85,6 +85,11 @@ const changeSiteLocale = (docLang) => {
                     element.innerHTML = attributeLocaleData[docLang];
                 }
             }
+
+            if (attributeValue === 'viewResume' && element instanceof HTMLAnchorElement) {
+                // eslint-disable-next-line no-param-reassign
+                element.href = `./resume/resume_${docLang}.pdf`;
+            }
         });
     }
 };
