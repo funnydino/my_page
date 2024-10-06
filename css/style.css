@@ -1098,6 +1098,10 @@ section {
     transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
+.contacts__link_habr {
+    background-image: url('../img/svg/social/habr_logo.svg');
+}
+
 .contacts__link_telegram {
     background-image: url('../img/svg/social/telegram_logo.svg');
 }
