@@ -645,6 +645,8 @@ section {
 }
 
 .about__photo {
+    position: relative;
+    z-index: 11;
     float: left;
     overflow: hidden;
     margin-right: 50px;
