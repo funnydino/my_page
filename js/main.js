@@ -421,7 +421,31 @@ import { translateStr } from './locales.js';
             copyrightYearElement.innerText = `${currentYear}`;
         };
 
+        /**
+         * Установить состояние отображения снегопада на странице
+         * @returns {void}
+         */
+        const setSnowFallVisibilityState = () => {
+            const currentDate = new Date();
+            const currentDay = currentDate.getDate();
+            const currentMonth = currentDate.getMonth() + 1;
+
+            const snowFallStartDay = 15;
+            const snowFallStartMonth = 12;
+            const snowFallEndDay = 15;
+            const snowFallEndMonth = 1;
+
+            const showFallElement = document.querySelector('.snow-fall');
+            const isSnowShouldFalling = (currentMonth === snowFallStartMonth && currentDay >= snowFallStartDay)
+                || (currentMonth === snowFallEndMonth && currentDay <= snowFallEndDay);
+
+            if (showFallElement !== null && isSnowShouldFalling) {
+                showFallElement.classList.remove('visually-hidden');
+            }
+        };
+
         setCurrentAge();
         setYearInCopyrightElement();
+        setSnowFallVisibilityState();
     });
 })();
